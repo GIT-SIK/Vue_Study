@@ -45,7 +45,6 @@ npm run build
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ```
 
-<!--
 - - - - -
 
 ## json-server
@@ -70,7 +69,6 @@ npm install concurrently --save-dev
 }
 ```
 
--->
 
 ### 오류 해결 문서
 
