@@ -2,8 +2,17 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import api from '@/utils/api'
+import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
+const pinia = createPinia();
 const app = createApp(App)
+
+/* pinia 설정 */
+app.use(pinia);
+
+/* pinia 상태 유지를 위한 설정 */
+pinia.use(piniaPluginPersistedstate);
 
 /* 공통 Axios 전역 지정 */
 app.config.globalProperties.$api = api
