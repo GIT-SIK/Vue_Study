@@ -67,6 +67,8 @@ export default {
     }
   },
 
+  inject: ['showToast'], 
+
   methods: {
     async fetchApi(id) {
       this.loading = true
@@ -74,9 +76,10 @@ export default {
       try {
         const res = await this.$api.get(`/api/${id}`)
         this.apiData = res.data
+        this.showToast(`id가 ` + res.data.id + `인 데이터를 가져옵니다.`)
         console.log(this.apiData)
       } catch (e) {
-        alert('해당 값이 없습니다.')
+        this.showToast('해당 값이 없습니다.')
         console.error('[SubPage1] API ERROR:', e)
       } finally {
         this.loading = false
