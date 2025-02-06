@@ -20,6 +20,18 @@ npm run serve
 npm run dev
 ```
 
+#### Vuetify
+- 자동
+```
+vue add vuetify
+```
+
+- 수동 (설정 필요)
+```
+npm install vuetify
+npm install --save material-design-icons-iconfont
+```
+
 > **(package.json) Vue CLI**
 >```
 > "scripts": {
