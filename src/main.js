@@ -1,15 +1,17 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import api from '@/utils/api'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 import { createPinia } from 'pinia'
+import api from '@/utils/api'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
-const pinia = createPinia();
+
 const app = createApp(App)
 
 /* pinia 설정 */
-app.use(pinia);
+const pinia = createPinia()
 
 /* pinia 상태 유지를 위한 설정 */
 pinia.use(piniaPluginPersistedstate);
@@ -17,7 +19,8 @@ pinia.use(piniaPluginPersistedstate);
 /* 공통 Axios 전역 지정 */
 app.config.globalProperties.$api = api
 
-/* 공통 뷰 전역 지정*/
+loadFonts()
+
 const globalComponents = import.meta.glob('@/components/global/*.vue')
 
 const loadComponents = async () => {
@@ -41,5 +44,7 @@ const loadComponents = async () => {
 }
 loadComponents().then(() => {
   app.use(router)
+  app.use(pinia)
+  app.use(vuetify)
   app.mount('#app')
 })

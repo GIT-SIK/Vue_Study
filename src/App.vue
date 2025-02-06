@@ -1,8 +1,10 @@
 <template>
-  <div>
+<v-app>
+  <v-main>
     <ToastMessage ref="toast" />
     <router-view />
-  </div>
+  </v-main>
+</v-app>
 </template>
 
 <script>
@@ -15,7 +17,7 @@ export default {
   },
   provide() {
     return {
-      showToast: this.showToast, // showToast 메서드 전달
+      showToast: this.showToast,
     }
   },
   methods: {
@@ -26,3 +28,6 @@ export default {
   }
 }
 </script>
+
+
+
