@@ -1,14 +1,14 @@
 <template>
     <span> 호출1 </span>
     <div>
-        <label>{{ sData1 }}</label> <br>
-        <label>{{ sData2 }}</label> <br>
-        <button @click="getData">값 가져오기</button>
+        <v-label>{{ sData1 }}</v-label> <br>
+        <v-label>{{ sData2 }}</v-label> <br>
+        <v-btn @click="getData">값 가져오기</v-btn>
     </div>
     <span> 호출2 (자동) </span>
     <div> 
-        <label>{{ pData1 }}</label> <br>
-        <label>{{ pData2 }}</label>
+        <v-label>{{ pData1 }}</v-label> <br>
+        <v-label>{{ pData2 }}</v-label>
     </div>
   </template>
   

@@ -1,31 +1,30 @@
 <template>
   <div>SubPage1</div>
-
-  <table>
+  <v-table>
     <tbody>
       <tr>
         <td>
           <span> id : 1 </span>
         </td>
         <td>
-          <BaseButton @click="fetchApi(1)">클릭</BaseButton>
+          <v-btn @click="fetchApi(1)">클릭</v-btn>
         </td>
       </tr>
       <tr>
         <td>
-          <input v-model="val" placeholder="id 입력" />
+          <v-text-field v-model="val" placeholder="id 입력" />
         </td>
         <td>
-          <BaseButton @click="fetchApi(val)">클릭</BaseButton>
+          <v-btn @click="fetchApi(val)">클릭</v-btn>
         </td>
       </tr>
     </tbody>
-  </table>
+  </v-table>
 
   <div v-if="loading">Loading...</div>
   <div v-else-if="error">{{ error }}</div>
   <div v-else>
-    <table>
+    <v-table>
       <tbody>
         <tr>
           <td>id</td>
@@ -40,7 +39,7 @@
           <td>{{ apiData.content }}</td>
         </tr>
       </tbody>
-    </table>
+    </v-table>
   </div>
 </template>
 

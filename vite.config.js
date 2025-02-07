@@ -19,6 +19,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    vuetify()
   ],
   resolve: {
     alias: {

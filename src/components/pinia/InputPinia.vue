@@ -1,8 +1,11 @@
 <template>
-<input type="text" v-model="sData1">
-<input type="text" v-model="sData2">
-<button @click="inputData"> 입력 </button>
+<div class="pinia-container">
+<v-text-field v-model="sData1" placeholder="값 1"/>
+<v-text-field v-model="sData2" placeholder="값 2"/>
+<v-btn @click="inputData"> 입력 </v-btn>
+</div>
 </template>
+
 
 <script>
 import { usePiniaStore } from '@/store/pinia';
@@ -30,3 +33,10 @@ setup() {
 },
 }
 </script>
+
+<style>
+.pinia-container {
+    width: 50vw;
+}
+
+</style>

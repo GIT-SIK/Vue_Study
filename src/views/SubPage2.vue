@@ -1,22 +1,22 @@
 <template>
   <div>SubPage2</div>
 
-  <table>
+  <v-table>
     <tbody>
       <tr>
         <td></td>
         <td>
-          <BaseButton class="danger">클릭</BaseButton>
+          <v-btn class="danger">클릭</v-btn>
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
-          <BaseButton>클릭</BaseButton>
+          <v-btn>클릭</v-btn>
         </td>
       </tr>
     </tbody>
-  </table>
+  </v-table>
 </template>
 
 <script>

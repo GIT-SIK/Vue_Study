@@ -38,6 +38,7 @@
     position: fixed;
     top: 10px;
     right: 0;
+    z-index: 1000;
     transform: translateX(-5%);
     display: flex;
     flex-direction: column;
