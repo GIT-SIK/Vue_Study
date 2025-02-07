@@ -29,8 +29,11 @@ vue add vuetify
 - 수동 (설정 필요)
 ```
 npm install vuetify
+npm install vite-plugin-vuetify@latest || npm install vue-cli-plugin-vuetify
 npm install --save material-design-icons-iconfont
 ```
+
+※ 자동으로 할 경우 기존 프로젝트에서는 덮어 씌어져 데이터가 삭제될 수 있음.
 
 > **(package.json) Vue CLI**
 >```
