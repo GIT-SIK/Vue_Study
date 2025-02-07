@@ -5,6 +5,8 @@ import SubPage1 from '../views/SubPage1.vue'
 import SubPage2 from '../views/SubPage2.vue'
 import InputPinia from '@/components/pinia/InputPinia.vue'
 import OutputPinia from '@/components/pinia/OutputPinia.vue'
+import vuetify1 from '@/components/design/VuetifyD1.vue'
+import VuetifyOpenList from '@/components/design/VuetifyOpenList.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,6 +21,8 @@ const router = createRouter({
         { path: 'sub-page2', component: SubPage2 },
         { path: 'ip', component: InputPinia },
         { path: 'op', component: OutputPinia },
+        { path: 'vtf1', component: vuetify1},
+        { path: 'vtfol', component: VuetifyOpenList},
       ],
     },
     {
