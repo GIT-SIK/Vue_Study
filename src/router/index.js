@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '../views/Layout.vue'
 import MainPage from '../views/MainPage.vue'
 import SubPage1 from '../views/SubPage1.vue'
-import SubPage2 from '../views/SubPage2.vue'
+import VuetifyOpenListPage from '../views/design/VuetifyOpenListPage.vue'
 import InputPinia from '@/components/pinia/InputPinia.vue'
 import OutputPinia from '@/components/pinia/OutputPinia.vue'
 import vuetify1 from '@/components/design/VuetifyD1.vue'
@@ -18,7 +18,7 @@ const router = createRouter({
       children: [
         { path: '', component: MainPage },
         { path: 'sub-page1', component: SubPage1 },
-        { path: 'sub-page2', component: SubPage2 },
+        { path: 'vtfolp', component: VuetifyOpenListPage },
         { path: 'ip', component: InputPinia },
         { path: 'op', component: OutputPinia },
         { path: 'vtf1', component: vuetify1},
