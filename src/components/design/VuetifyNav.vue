@@ -21,12 +21,15 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-home-city" title="Home" value="home"></v-list-item>
-          <v-list-item prepend-icon="mdi-account" title="My Account" value="account"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-group-outline" title="Friend" value="users"></v-list-item>
+          <v-list-item 
+          v-for="item in items"
+          :key="item.title"
+          :prepend-icon="item.icon" 
+          :title="item.title" 
+          :value="item.val"></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 250px"></v-main>
+      <v-main style="height: 100vh"></v-main>
     </v-layout>
   </v-card>
 </template>
@@ -36,31 +39,46 @@
   import defaultUserImage from '@/assets/default_user.png'
 
   export default {
-    setup () {
+    setup() {
+      /* 알람 */
       const showToast = inject('showToast')
-      const drawer = ref(true);
-      const rail = ref(true);
-      const userName = ref('UserName');
-
-      console.log(rail)
-      const items = [{ title: 'Home', icon: 'dashboard' },
-      { title: 'About', icon: 'question_answer' }] 
-
-      const clickMethod = (data) => {
+      const clickMethod = (data) => { 
             showToast(`${data}이 클릭되었습니다.`)
-        }        
+      }    
+
+      /* 네비 전체 보이기 여부 */
+      const drawer = ref(true);
+
+
+      /* 네비 서브 보이기 여부 */
+      const rail = ref(!(false));
+
       const openRail = () => {
           rail.value = !rail.value
       }
 
 
+      /* 네비 컨텐츠 데이터 */
+      const items = ref([]);
+      const userName = ref('UserName');
+
+      items.value = [
+        { title: 'Home', icon: 'mdi-home-city',val: 'home' },
+        { title: 'My Account', icon: 'mdi-account',val: 'account' },
+        { title: 'Friend', icon: 'mdi-account-group-outline',val: 'friend' },
+      ]     
+
+
+
       return {
         clickMethod,
+
         drawer,
         rail,
+        openRail,
+
         userName,
         defaultUserImage,
-        openRail,
         items
       }
     }
@@ -68,11 +86,3 @@
     
   }
 </script>
-
-<style>
-
-.v-navigation-drawer {
-  border-style : none !important; 
-}
-
-</style>
