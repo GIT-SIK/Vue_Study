@@ -62,6 +62,15 @@ npm run build
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ```
 
+#### Vuetify Play
+
+<a href="https://play.vuetifyjs.com/?ref=github">
+  ▶︎ Play
+</a>
+<br><br>
+
+
+
 - - - - -
 
 ## json-server
