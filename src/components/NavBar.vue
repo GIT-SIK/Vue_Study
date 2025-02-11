@@ -2,8 +2,12 @@
   <nav class="nav-container">
     <h3><router-link to="/"> HOME </router-link></h3>
     <ul>
-      <li><router-link to="/sub-page1">Page 1</router-link></li>
-      <li><router-link to="/vtfolp">VuetifyTestPage</router-link></li>
+      <li><router-link to="/sub-page1">DB</router-link></li>
+      <li><router-link to="/pi">/pi</router-link></li>
+      <li><router-link to="/pinp">/pinp</router-link></li>
+      <li><router-link to="/po">/po</router-link></li>
+      <li><router-link to="/v">/V</router-link></li>
+      <li><router-link to="/card">/Card</router-link></li>
     </ul>
   </nav>
 </template>

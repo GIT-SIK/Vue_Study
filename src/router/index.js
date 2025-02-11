@@ -5,6 +5,7 @@ import MainLayout from '../views/MainLayout.vue'
 import MainPage from '../views/MainPage.vue'
 import SubPage1 from '../views/SubPage1.vue'
 import InputPinia from '@/components/pinia/InputPinia.vue'
+import InputPiniaNP from '@/components/pinia/InputPiniaNoPersist.vue'
 import OutputPinia from '@/components/pinia/OutputPinia.vue'
 
 //**  Vuetify 페이지 
@@ -32,6 +33,7 @@ const router = createRouter({
         { path: '', component: MainPage },
         { path: 'sub-page1', component: SubPage1 },
         { path: 'pi', component: InputPinia },
+        { path: 'pinp', component: InputPiniaNP },
         { path: 'po', component: OutputPinia },
       ],
     },

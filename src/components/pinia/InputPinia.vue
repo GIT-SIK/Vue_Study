@@ -1,9 +1,16 @@
 <template>
-<div class="pinia-container">
-<v-text-field v-model="sData1" placeholder="값 1"/>
-<v-text-field v-model="sData2" placeholder="값 2"/>
-<v-btn @click="inputData"> 입력 </v-btn>
-</div>
+    <div class="pinia-container">
+        <div> pinia-plugin-persistedstate 사용 페이지 </div>
+        <!-- 페이지 테스트
+        값 입력 후 상태 변화 
+        네비 이동 : 값 O
+        주소 이동 : 값 O
+        새로고침 : 값 O
+        -->
+        <v-text-field v-model="sData1" placeholder="값 1"/>
+        <v-text-field v-model="sData2" placeholder="값 2"/>
+        <v-btn @click="inputData"> 입력 </v-btn>
+    </div>
 </template>
 
 
