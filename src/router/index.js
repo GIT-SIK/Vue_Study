@@ -16,6 +16,10 @@ import VuetifyMainPage from '../views/design/VuetifyMainPage.vue'
 /* Table,   */ import VuetifyD1 from '@/components/design/VuetifyD1.vue'
 /* Bottom Open List */ import VuetifyOpenList from '@/components/design/VuetifyOpenList.vue'
 
+// 일반 디자인
+/* Card */ import VuetifyCard from '@/components/design/VuetifyCard.vue'
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,8 +48,9 @@ const router = createRouter({
     },
 
     {
-      path: '/about',
-      name: 'about',
+      path: '/card',
+      name: 'VuetifyCard',
+      component: VuetifyCard
     },
   ],
 })

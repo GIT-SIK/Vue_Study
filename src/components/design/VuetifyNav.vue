@@ -39,7 +39,16 @@
   import defaultUserImage from '@/assets/default_user.png'
 
   export default {
-    setup() {
+    props: {
+      userName: {
+      type : String
+      }
+    },
+    setup(props) {
+      /* Props Data */
+      const userName = ref(props.userName); 
+      console.log(props.userName)
+
       /* 알람 */
       const showToast = inject('showToast')
       const clickMethod = (data) => { 
@@ -57,10 +66,8 @@
           rail.value = !rail.value
       }
 
-
       /* 네비 컨텐츠 데이터 */
       const items = ref([]);
-      const userName = ref('UserName');
 
       items.value = [
         { title: 'Home', icon: 'mdi-home-city',val: 'home' },
