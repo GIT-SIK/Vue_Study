@@ -9,12 +9,11 @@
 
 <script>
 import VuetifyNav from '@/components/design/VuetifyNav.vue'
-import VuetifyNav2 from '@/components/design/VuetifyNav2.vue'
 import {useRoute} from 'vue-router'
 export default {
   components: {
     VuetifyNav,
-    VuetifyNav2
+
   },
   setup() {
     const route = useRoute();

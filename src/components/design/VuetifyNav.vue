@@ -47,7 +47,7 @@
     setup(props) {
       /* Props Data */
       const userName = ref(props.userName); 
-      console.log(props.userName)
+      console.log(userName)
 
       /* 알람 */
       const showToast = inject('showToast')
@@ -84,7 +84,6 @@
         rail,
         openRail,
 
-        userName,
         defaultUserImage,
         items
       }
