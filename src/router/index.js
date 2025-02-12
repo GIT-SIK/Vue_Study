@@ -7,6 +7,7 @@ import MainPage from '../views/MainPage.vue'
 //**  일반 페이지
 import SubPage1 from '../views/code/SubPage1.vue'
 import VEmit from '../components/code/VEmitParent.vue'
+import VProps from '../components/code/VPropsParent.vue'
 
 //** Pinia 페이지
 import InputPinia from '@/components/pinia/InputPinia.vue'
@@ -37,7 +38,8 @@ const router = createRouter({
       children: [
         { path: '', component: MainPage },
         { path: 'sub-page1', component: SubPage1 },
-        { path: 'emit', component: VEmit }
+        { path: 'emit', component: VEmit },
+        { path: 'props', component: VProps }
       ],
     },
 
