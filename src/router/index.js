@@ -1,9 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
-//**  일반 페이지
+//** */ 기본 페이지
 import MainLayout from '../views/MainLayout.vue'
 import MainPage from '../views/MainPage.vue'
-import SubPage1 from '../views/SubPage1.vue'
+
+
+//**  일반 페이지
+import SubPage1 from '../views/code/SubPage1.vue'
+import VEmit from '../components/code/VEmitParent.vue'
+
+//** Pinia 페이지
 import InputPinia from '@/components/pinia/InputPinia.vue'
 import InputPiniaNP from '@/components/pinia/InputPiniaNoPersist.vue'
 import OutputPinia from '@/components/pinia/OutputPinia.vue'
@@ -26,12 +31,22 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: '/c',
+      name: 'vCode',
       component: MainLayout,
       children: [
         { path: '', component: MainPage },
         { path: 'sub-page1', component: SubPage1 },
+        { path: 'emit', component: VEmit }
+      ],
+    },
+
+    {
+      path: '/p',
+      name: 'vPinia',
+      component: MainLayout,
+      children: [
+        { path: '', component: MainPage },
         { path: 'pi', component: InputPinia },
         { path: 'pinp', component: InputPiniaNP },
         { path: 'po', component: OutputPinia },
@@ -40,7 +55,7 @@ const router = createRouter({
 
     {
       path: '/v',
-      name: 'vuetify',
+      name: 'vVuetify',
       component: VuetifyLayout,
       children: [
         { path: '', component: VuetifyMainPage },
