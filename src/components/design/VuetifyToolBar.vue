@@ -7,13 +7,11 @@
 -->
 
 <template>
-  <v-app>
-    <v-container>
-      <v-toolbar density="compact" color="transparent">
-        <v-spacer></v-spacer>
+      <v-toolbar color="transparent">
         <v-text-field
           prepend-icon="mdi-magnify"
           single-line
+          hide-details
           v-model="searchData"
           label="Search"
           class="toolbar-search-input"
@@ -22,13 +20,13 @@
           @keyup.enter="search"
         />
         <v-spacer></v-spacer>
-        <v-avatar size="32">
-          <img :src="userImage" alt="user" />
-        </v-avatar>
-        <span class="ml-4 mr-4 toolbar-username">{{ userName }}</span>
+        <div class="toolbar-user">
+          <v-avatar size="32">
+            <img :src="userImage" alt="user" />
+          </v-avatar>
+          <div class="ml-4 mr-9 toolbar-username">{{ userName }}</div>
+        </div>
       </v-toolbar>
-    </v-container>
-  </v-app>
 </template>
 
 <script>
@@ -57,5 +55,11 @@
   .toolbar-search-input .v-input__control .v-label,
   .toolbar-username {
     color: #3e2723 !important;
+  }
+
+  .toolbar-user {
+    display:flex;
+    align-items: center;
+    transform: translateY(10px);
   }
 </style>

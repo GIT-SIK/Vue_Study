@@ -8,58 +8,59 @@
 -->
 
 <template>
-  <v-card class="mx-auto" max-width="75" variant="flat">
-    <v-item-group selected-class="selected-item">
-      <v-item
-        v-slot="{ isSelected, selectedClass, toggle }"
-        v-for="(item, i) in items"
-        :key="i"
-      >
-        <template v-if="item.icon !== undefined">
-          <template v-if="item.tooltip !== undefined">
-            <v-tooltip location="right">
-              <template v-slot:activator="{ props }">
-                <v-btn
-                  variant="text"
-                  icon
-                  v-bind="props"
-                  :class="['d-flex align-center', selectedClass]"
-                  @click="toggle"
-                  class="my-1"
-                  size="large"
-                >
-                  <v-icon color="brown-darken-2">{{item.icon}}</v-icon>
-                </v-btn>
-              </template>
-              <span>{{item.tooltip}}</span>
-            </v-tooltip>
+    <v-card class="mx-auto" max-width="75" variant="flat">
+      <v-item-group selected-class="selected-item">
+        <v-item
+          v-slot="{ isSelected, selectedClass, toggle }"
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <template v-if="item.icon !== undefined">
+            <template v-if="item.tooltip !== undefined">
+              <v-tooltip location="right">
+                <template v-slot:activator="{ props }">
+                  <v-btn
+                    variant="text"
+                    icon
+                    v-bind="props"
+                    :class="['d-flex align-center', selectedClass]"
+                    @click="toggle"
+                    class="my-1"
+                    size="large"
+                  >
+                    <v-icon color="brown-darken-2">{{item.icon}}</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{item.tooltip}}</span>
+              </v-tooltip>
+            </template>
+
+            <template v-else>
+              <v-btn
+                variant="flat"
+                icon
+                :class="['d-flex align-center', selectedClass]"
+                class="my-1"
+                size="large"
+              >
+                <v-icon color="brown-darken-2">{{item.icon}}</v-icon>
+              </v-btn>
+            </template>
           </template>
 
-          <template v-else>
-            <v-btn
-              variant="flat"
-              icon
-              :class="['d-flex align-center', selectedClass]"
-              class="my-1"
-              size="large"
-            >
-              <v-icon color="brown-darken-2">{{item.icon}}</v-icon>
-            </v-btn>
+          <template v-if="item.tab !== undefined">
+            <div style="height: 30px"></div>
           </template>
-        </template>
-
-        <template v-if="item.tab !== undefined">
-          <div style="height: 30px"></div>
-        </template>
-      </v-item>
-    </v-item-group>
-  </v-card>
+        </v-item>
+      </v-item-group>
+    </v-card>
 </template>
 
 <script>
   export default {
     data: () => ({
       items: [
+        { tab: '' },
         { icon: 'mdi-home', tooltip: 'Home' },
         { icon: 'mdi-bell' },
         { tab: '' },
