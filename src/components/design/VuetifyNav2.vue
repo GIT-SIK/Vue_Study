@@ -42,8 +42,19 @@
                 :class="['d-flex align-center', selectedClass]"
                 class="my-1"
                 size="large"
+
               >
+              <template v-if="item.badge">
+               <v-badge v-model="isNotificationRead" color="red" left overlap dot>
+                  <template v-slot:badge>
+                    <span>6</span>
+                  </template>
+                  <v-icon color="brown-darken-2" @click="isNotificationRead = !isNotificationRead">{{item.icon}}</v-icon>
+                </v-badge>
+              </template>
+              <template v-else>
                 <v-icon color="brown-darken-2">{{item.icon}}</v-icon>
+              </template>
               </v-btn>
             </template>
           </template>
@@ -57,21 +68,31 @@
 </template>
 
 <script>
+  import {ref} from 'vue';
   export default {
-    data: () => ({
-      items: [
+
+    setup() {
+    
+    const isNotificationRead = ref(true)
+
+    const items= [
         { tab: '' },
-        { icon: 'mdi-home', tooltip: 'Home' },
-        { icon: 'mdi-bell' },
+        { icon: 'mdi-home', badge: false, tooltip: 'Home' },
+        { icon: 'mdi-bell', badge: true},
         { tab: '' },
-        { icon: 'mdi-account-group-outline', tooltip: 'Friends' },
-        { icon: 'mdi-chat-outline', tooltip: 'Chat' },
+        { icon: 'mdi-account-group-outline', badge: false, tooltip: 'Friends' },
+        { icon: 'mdi-chat-outline', badge: false,  tooltip: 'Chat' },
         { tab: '' },
         { tab: '' },
-        { icon: 'mdi-cog-outline', tooltip: 'My Account' },
-        { icon: 'mdi-logout', tooltip: 'Logout' },
-      ],
-    }),
+        { icon: 'mdi-cog-outline', badge: false,  tooltip: 'My Account' },
+        { icon: 'mdi-logout', badge: false,  tooltip: 'Logout' },
+      ]
+
+    return {
+      items,
+      isNotificationRead,
+    }
+    }
   }
 </script>
 
