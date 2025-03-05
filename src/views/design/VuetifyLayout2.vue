@@ -6,15 +6,15 @@ components/design/layout2
 -->
 
 <template>
-    <v-row style="height:100vh">
-        <v-col cols="auto" style="margin-left: 12px;">
+    <v-row style="height:100vh" no-gutters>
+        <v-col cols="auto" md="0" class="pl-2 pr-2">
             <VuetifyLeftNav/>
         </v-col>
         <v-col>
-            <v-row rows="auto"> 
+            <v-row no-gutters> 
                 <VuetifyToolBar/>
             </v-row>
-            <v-row> 
+            <v-row no-gutters> 
                  <RouterView/> 
             </v-row>
         </v-col>
@@ -37,9 +37,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.vuetify-content {
-  padding : 0 5px 0 5px;
-}
-</style>

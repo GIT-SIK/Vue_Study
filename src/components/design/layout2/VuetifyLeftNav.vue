@@ -115,7 +115,7 @@ export default {
   max-width: 300px;
   position: absolute;
   top: 30px; 
-  left: 60px;
+  left: 50px;
   z-index: 10;
   margin: 0 auto;
   padding: 20px;

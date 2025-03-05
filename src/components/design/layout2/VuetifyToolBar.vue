@@ -11,7 +11,6 @@
         <v-text-field
           prepend-icon="mdi-magnify"
           single-line
-          hide-details
           v-model="searchData"
           label="Search"
           class="toolbar-search-input"
@@ -61,6 +60,5 @@
   .toolbar-user {
     display:flex;
     align-items: center;
-    transform: translateY(10px);
   }
 </style>
