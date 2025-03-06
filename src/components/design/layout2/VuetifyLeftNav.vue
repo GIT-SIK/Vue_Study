@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="75" variant="flat">
+  <v-card class="mx-auto" max-width="75" variant="">
     <v-item-group selected-class="selected-item">
       <v-item
         v-slot="{ isSelected, selectedClass, toggle }"
@@ -28,7 +28,7 @@
 
           <template v-else>
             <v-btn
-              variant="flat"
+              variant=""
               icon
               :class="['d-flex align-center', selectedClass]"
               class="my-1"
@@ -84,6 +84,7 @@ export default {
     }
 
     const items = [
+    { tab: "" },
       { tab: "" },
       { icon: "mdi-home", badge: false, tooltip: "Home" },
       { icon: "mdi-bell", badge: true },

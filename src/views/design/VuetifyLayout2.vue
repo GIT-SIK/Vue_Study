@@ -6,11 +6,12 @@ components/design/layout2
 -->
 
 <template>
-    <v-row style="height:100vh" no-gutters>
-        <v-col cols="auto" md="0" class="pl-2 pr-2">
+    <v-row class="vuetifylayout-container h-100" no-gutters>
+      <v-col cols="1" class="d-none d-md-block"></v-col>
+        <v-col cols="auto" class="">
             <VuetifyLeftNav/>
         </v-col>
-        <v-col>
+        <v-col cols="11" md="9">
             <v-row no-gutters> 
                 <VuetifyToolBar/>
             </v-row>
@@ -37,3 +38,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.vuetifylayout-container {
+  background-color: #EFEBE9;
+}
+</style>
