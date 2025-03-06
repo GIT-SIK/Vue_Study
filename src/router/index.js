@@ -17,7 +17,6 @@ import OutputPinia from '@/components/pinia/OutputPinia.vue'
 //**  Vuetify 페이지 
 // 레이아웃 및 Prop 전달 페이지
 import VuetifyLayout from '@/views/design/VuetifyLayout.vue'
-import VuetifyLayout2 from '@/views/design/VuetifyLayout2.vue'
 import VuetifyMainPage from '../views/design/VuetifyMainPage.vue'
 
 // 컴포넌트 디자인
@@ -26,6 +25,10 @@ import VuetifyMainPage from '../views/design/VuetifyMainPage.vue'
 
 // 일반 디자인
 /* Card */ import VuetifyCard from '@/components/design/VuetifyCard.vue'
+
+//** VuetifyLayout2 Router */
+import VuetifyLayout2 from '@/views/design/VuetifyLayout2.vue'
+import VuetifyLayout2MainPage from '@/views/design/VuetifyLayout2MainPage.vue'
 
 
 
@@ -73,6 +76,7 @@ const router = createRouter({
       component: VuetifyLayout2,
       children: [
         { path: '', component: VuetifyMainPage },
+        { path: 'sub', component: VuetifyLayout2MainPage },
       ],
     },
 
