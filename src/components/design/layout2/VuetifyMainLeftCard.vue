@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto d-sm-flex flex-column main-container">
-        <v-card class="w-100 mb-5 pl-4 pr-4" variant="" style="background-color: #FFFFFF;"> 
+        <v-card class="w-100 mb-5 pl-4 pr-4" variant="text" style="background-color: #FFFFFF;"> 
             <v-text-field
           prepend-icon="mdi-magnify"
           single-line
@@ -10,7 +10,7 @@
           variant="plain"
             ></v-text-field>
         </v-card>
-        <v-card class="w-100 flex-grow-1 overflow-y-auto" variant="" style="background-color: #FFFFFF;">
+        <v-card class="w-100 flex-grow-1 overflow-y-auto" variant="text" style="background-color: #FFFFFF;">
             <v-list lines="three">
                 <v-list-subheader>List SubHeader</v-list-subheader>
                 <v-list-item

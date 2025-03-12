@@ -1,8 +1,8 @@
 <template>
-  <v-card class="mx-auto" max-width="75" variant="">
+  <v-card class="mx-auto" max-width="75" variant="text">
     <v-item-group selected-class="selected-item">
       <v-item
-        v-slot="{ isSelected, selectedClass, toggle }"
+        v-slot="{ selectedClass, toggle }"
         v-for="(item, i) in items"
         :key="i"
       >
@@ -28,7 +28,7 @@
 
           <template v-else>
             <v-btn
-              variant=""
+              variant="text"
               icon
               :class="['d-flex align-center', selectedClass]"
               class="my-1"

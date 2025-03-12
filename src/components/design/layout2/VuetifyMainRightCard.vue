@@ -1,5 +1,5 @@
 <template>
-        <v-card class="mx-auto d-sm-flex flex-column right-card" variant="">
+        <v-card class="mx-auto d-sm-flex flex-column right-card" variant="text">
             <v-card-title class="d-sm-flex align-sm-center justify-center">List SubHeader</v-card-title>
             <v-list lines="three" class="pa-0 flex-grow-1 overflow-y-auto right-card-list">
                 <v-list-item
@@ -18,7 +18,7 @@
                 hide-details
                 label="Message"
                 class="main-message-input"
-                variant=""
+                variant="text"
                 >
                 </v-text-field>
                 <v-btn

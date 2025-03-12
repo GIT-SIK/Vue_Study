@@ -8,7 +8,7 @@ components/design/layout2
 <template>
     <v-row class="vuetifylayout-container h-100" no-gutters>
       <v-col cols="1" class="d-none d-md-block"></v-col>
-        <v-col cols="auto" class="">
+        <v-col cols="auto">
             <VuetifyLeftNav/>
         </v-col>
         <v-col cols="11" md="9">
