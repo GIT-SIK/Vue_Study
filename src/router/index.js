@@ -30,6 +30,7 @@ import VuetifyMainPage from '../views/design/VuetifyMainPage.vue'
 import VuetifyLayout2 from '@/views/design/VuetifyLayout2.vue'
 import VuetifyLayout2MainPage from '@/views/design/VuetifyLayout2MainPage.vue'
 
+import VuetifyCols from '@/views/design/VuetifyCols.vue'
 
 
 const router = createRouter({
@@ -66,10 +67,16 @@ const router = createRouter({
       children: [
         { path: '', component: VuetifyMainPage },
         { path: 'd1', component: VuetifyD1},
-        { path: 'c1', component: VuetifyOpenList},
+        { path: 'ol', component: VuetifyOpenList},
       ],
     },
     
+
+    { path : '/v3',
+      name : 'vVuetify3',
+      component : VuetifyCols
+    },
+
     {
       path: '/v2',
       name: 'vVuetify2',
