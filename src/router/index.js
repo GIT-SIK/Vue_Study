@@ -30,8 +30,10 @@ import VuetifyMainPage from '../views/design/VuetifyMainPage.vue'
 import VuetifyLayout2 from '@/views/design/VuetifyLayout2.vue'
 import VuetifyLayout2MainPage from '@/views/design/VuetifyLayout2MainPage.vue'
 
-import VuetifyCols from '@/views/design/VuetifyCols.vue'
-
+import VuetifyCols from '@/components/design/grid/VuetifyCols.vue'
+import VuetifyBreakPoint from '@/components/design/grid/VuetifyBreakPoint.vue'
+import VuetifyBreakPoint2 from '@/components/design/grid/VuetifyBreakPoint2.vue'
+import VuetifyLayoutGrid from '@/views/design/VuetifyLayoutGrid.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,7 +76,13 @@ const router = createRouter({
 
     { path : '/v3',
       name : 'vVuetify3',
-      component : VuetifyCols
+      component : VuetifyLayoutGrid,
+      children: [
+        { path: 'cols', component: VuetifyCols },
+        { path: 'bp', component: VuetifyBreakPoint },
+        { path: 'bp2', component: VuetifyBreakPoint2 },
+      ],
+
     },
 
     {
